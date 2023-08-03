@@ -10,7 +10,7 @@ homepage = "https://bitbucket.csiro.au/projects/SC/repos/eratos-xarray/browse"
 repository = "https://bitbucket.csiro.au/projects/SC/repos/eratos-xarray/browse"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8"
 xarray = "^2023.1.0"
 numpy = "^1.21"
 eratos = { url = "https://releases.eratos.com/sdk/python/eratos-python-latest.zip"}
