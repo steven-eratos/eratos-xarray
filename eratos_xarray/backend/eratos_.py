@@ -1,9 +1,13 @@
+import xarray
+
 import numpy as np
+from packaging import version
 
 from eratos.adapter import Adapter
 from eratos.creds import AccessTokenCreds
 from eratos.data import Data, GSData
 
+import xarray
 from xarray.backends import StoreBackendEntrypoint
 from xarray.backends.common import BACKEND_ENTRYPOINTS
 from xarray import Variable
@@ -123,4 +127,8 @@ class EratosDataStore(AbstractDataStore):
         return Frozen(self.gsdata.dimensions().keys())
 
 
-BACKEND_ENTRYPOINTS["eratos"] = ('eratos', EratosBackendEntrypoint)
+if version.parse(xarray.__version__) >= version.parse('2023.4.0'):
+    BACKEND_ENTRYPOINTS["eratos"] = ('eratos', EratosBackendEntrypoint)
+else:
+    # noinspection PyTypeChecker
+    BACKEND_ENTRYPOINTS["eratos"] = EratosBackendEntrypoint
