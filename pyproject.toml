@@ -12,8 +12,8 @@ repository = "https://bitbucket.csiro.au/projects/SC/repos/eratos-xarray/browse"
 [tool.poetry.dependencies]
 python = "^3.8"
 xarray = "^2023.1.0"
-numpy = "^1.21"
-eratos = { url = "https://releases.eratos.com/sdk/python/eratos-python-latest.zip"}
+numpy = "^1.20.0"
+eratos = { url = "https://releases.eratos.com/sdk/python/eratos-python-0.13.6.zip" }
 
 [build-system]
 requires = ["poetry-core"]
