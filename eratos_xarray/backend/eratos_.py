@@ -100,8 +100,8 @@ class EratosDataStore(AbstractDataStore):
         self.gsdata = gsdata
 
     @classmethod
-    def open(cls, ern, auth=None):
-        adapter = Adapter(auth)
+    def open(cls, ern, eratos_auth: AccessTokenCreds = None):
+        adapter = Adapter(eratos_auth)
         resource = adapter.Resource(ern=ern)
         data: Data = resource.data()
         gsdata: GSData = data.gapi()
