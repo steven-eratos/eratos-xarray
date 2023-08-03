@@ -69,7 +69,7 @@ class EratosBackendArray(BackendArray):
 class EratosBackendEntrypoint(BackendEntrypoint):
     description = "Open remote datasets via Eratos SDK"
     url = 'https://docs.eratos.com/docs'
-    open_dataset_parameters = ['auth']
+    open_dataset_parameters = ['eratos_auth']
 
     def guess_can_open(
             self,
@@ -82,11 +82,11 @@ class EratosBackendEntrypoint(BackendEntrypoint):
             *,
             decode_times=True,
             drop_variables=None,
-            auth: AccessTokenCreds = None
+            eratos_auth: AccessTokenCreds = None
     ):
         store = EratosDataStore.open(
             ern=filename_or_obj,
-            auth=auth
+            eratos_auth=eratos_auth
         )
 
         store_entrypoint = StoreBackendEntrypoint()
@@ -100,8 +100,8 @@ class EratosDataStore(AbstractDataStore):
         self.gsdata = gsdata
 
     @classmethod
-    def open(cls, ern, auth=None):
-        adapter = Adapter(auth)
+    def open(cls, ern, eratos_auth: AccessTokenCreds = None):
+        adapter = Adapter(eratos_auth)
         resource = adapter.Resource(ern=ern)
         data: Data = resource.data()
         gsdata: GSData = data.gapi()
