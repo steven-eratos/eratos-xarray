@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "eratos-xarray"
+version = "0.1.0"
+description = "Xarray backend for Eratos SDK"
+authors = ["Chris Sharman <chris.sharman@csiro.au>"]
+readme = "README.md"
+packages = [{include = "eratos_xarray"}]
+license = "MIT"
+homepage = "https://bitbucket.csiro.au/projects/SC/repos/eratos-xarray/browse"
+repository = "https://bitbucket.csiro.au/projects/SC/repos/eratos-xarray/browse"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+xarray = "^2023.1.0"
+numpy = "^1.21"
+eratos = { url = "https://releases.eratos.com/sdk/python/eratos-python-latest.zip"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
