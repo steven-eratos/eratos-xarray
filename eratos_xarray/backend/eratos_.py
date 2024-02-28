@@ -55,8 +55,8 @@ class EratosBackendArray(BackendArray):
                 strides.append(k.step if k.step else 1)
             elif isinstance(k, int):
                 starts.append(k)
-                ends.append(k)
-                strides.append(k)
+                ends.append(k+1)
+                strides.append(1)
 
         array = self.gdata.get_subset_as_array(self.var, starts, ends, strides)
 
