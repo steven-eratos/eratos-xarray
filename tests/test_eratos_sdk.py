@@ -26,6 +26,6 @@ class EratosSDKITest(unittest.TestCase):
         # Import the backend module to ensure it is registered
         import eratos_xarray
 
-        silo = xr.open_dataset('ern:e-pn.io:resource:eratos.blocks.silo.maxtemperature', auth=self.ecreds)
+        silo = xr.open_dataset('ern:e-pn.io:resource:eratos.blocks.silo.maxtemperature', eratos_auth=self.ecreds)
         bars_silo = silo.sel(dict(lat=slice(-34.91, -34.02), lon=slice(148.03, 148.97))).sel(time=slice("2023-06-02", "2023-06-10"))
         self.assertEqual((9, 18, 19), bars_silo['max_temp'].shape)
