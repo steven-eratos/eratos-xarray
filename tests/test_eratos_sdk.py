@@ -56,6 +56,3 @@ class EratosSDKITest(unittest.TestCase):
         self.assertEqual(bars_silo['time'].data[-1], np.datetime64('2023-06-10T00:00:00.000000000'))
         self.assertEqual(xr.core.formatting.first_n_items(bars_silo.max_temp, 1), 18.4)
         self.assertEqual(bars_silo['max_temp'].shape, (9,))
-
-
-        self.assertEqual(bars_silo['max_temp'].shape, (9, 1, 1))
