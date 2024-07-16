@@ -39,9 +39,9 @@ class EratosSDKITest(unittest.TestCase):
 
     def test_silo_time_drill(self):
         """
-                Open remote SILO dataset, slice to known spatial area.
-                :return:
-                """
+        Open remote SILO dataset, slice to known spatial area.
+        :return:
+        """
         # Import the backend module to ensure it is registered
         import eratos_xarray
 
