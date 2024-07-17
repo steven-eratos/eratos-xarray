@@ -62,7 +62,6 @@ class EratosSDKITest(unittest.TestCase):
         Open remote SILO dataset, slice to known spatial area, do not load eratos_xarray directly
         :return:
         """
-        
 
         silo = xr.open_dataset('ern:e-pn.io:resource:eratos.blocks.silo.maxtemperature', engine = 'eratos', eratos_auth=self.ecreds)
         bars_silo = silo.sel(dict(lat=-34.91, lon=148.03), method='nearest').sel(time=slice("2023-06-02", "2023-06-10")).load()
