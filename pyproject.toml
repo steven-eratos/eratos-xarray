@@ -15,6 +15,9 @@ xarray = "^2023.1.0"
 numpy = "^1.20.0"
 eratos = { url = "https://releases.eratos.com/sdk/python/eratos-python-0.13.8.zip" }
 
+[tool.poetry.plugins."xarray.backends"]
+eratos = "eratos_xarray.backend.eratos_:EratosBackendEntrypoint"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
