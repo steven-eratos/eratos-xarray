@@ -1,0 +1,6 @@
+__pycache__/
+eratos.egg-info/
+*.py[cod]
+*$py.class
+dist/
+.env
