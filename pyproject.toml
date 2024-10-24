@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "eratos-xarray"
-version = "0.1.4"
+version = "0.1.5"
 description = "Xarray backend for Eratos SDK"
 authors = ["Chris Sharman <chris.sharman@csiro.au>"]
 readme = "README.md"
@@ -13,7 +13,7 @@ repository = "https://bitbucket.csiro.au/projects/SC/repos/eratos-xarray/browse"
 python = "^3.8, <3.12"
 xarray = "^2023.1.0"
 numpy = "^1.20.0"
-eratos = { url = "https://releases.eratos.com/sdk/python/eratos-python-0.13.9.zip" }
+eratos = { url = "https://releases.eratos.com/sdk/python/eratos-python-0.14.0.zip" }
 
 [tool.poetry.plugins."xarray.backends"]
 eratos = "eratos_xarray.backend.eratos_:EratosBackendEntrypoint"
