@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "eratos-xarray"
 version = "0.1.5"
-description = "Xarray backend for Eratos SDK blah blah blah"
+description = "Xarray backend for Eratos SDK"
 authors = ["Chris Sharman <chris.sharman@csiro.au>"]
 readme = "README.md"
 packages = [{ include = "eratos_xarray" }]
