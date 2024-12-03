@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "eratos-xarray"
 version = "0.1.5"
-description = "Xarray backend for Eratos SDK"
+description = "Xarray backend for Eratos SDK blah blah blah"
 authors = ["Chris Sharman <chris.sharman@csiro.au>"]
 readme = "README.md"
-packages = [{include = "eratos_xarray"}]
+packages = [{ include = "eratos_xarray" }]
 license = "MIT"
 homepage = "https://bitbucket.csiro.au/projects/SC/repos/eratos-xarray/browse"
 repository = "https://bitbucket.csiro.au/projects/SC/repos/eratos-xarray/browse"
